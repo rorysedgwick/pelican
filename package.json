@@ -1,0 +1,14 @@
+{
+  "name": "pelican",
+  "version": "1.0.0",
+  "description": "A portfolio of the processing sketches I have produced",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Rory Sedgwick",
+  "license": "ISC",
+  "dependencies": {
+    "processing-js": "^1.4.16"
+  }
+}
