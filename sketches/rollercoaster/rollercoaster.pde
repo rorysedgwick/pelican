@@ -1,12 +1,9 @@
-float topLeftX = 200;
-float topLeftY = 200;
-float topRightX = 400;
-float topRightY = 200;
-float botLeftX = 200;
-float botLeftY = 400;
-float botRightX = 400;
-float botRightY = 400;
+float leftX = 175;
+float rightX = 425;
+float topY = 175;
+float bottomY = 400;
 float centre = 300;
+float step = 8;
 
 
 void setup() {
@@ -16,15 +13,15 @@ void setup() {
 
 
 void draw() {
-  background(0);
+  background(75, 75, 75)
   strokeWeight(1);
 
   // top
   beginShape();
   fill(75, 75, 75);
   vertex(0, 0);
-  vertex(topLeftX, topRightY);
-  vertex(topRightX, topRightY);
+  vertex(leftX, topY);
+  vertex(rightX, topY);
   vertex(600, 0);
   endShape(CLOSE);
 
@@ -32,8 +29,8 @@ void draw() {
   beginShape();
   fill(75, 75, 75);
   vertex(0, 0);
-  vertex(topLeftX, topRightY);
-  vertex(botLeftX, botLeftY);
+  vertex(leftX, topY);
+  vertex(leftX, bottomY);
   vertex(0, 600);
   endShape(CLOSE);
 
@@ -41,8 +38,8 @@ void draw() {
   beginShape();
   fill(75, 75, 75);
   vertex(600, 0);
-  vertex(topRightX, topRightY);
-  vertex(botRightX, botRightY);
+  vertex(rightX, topY);
+  vertex(rightX, bottomY);
   vertex(600, 600);
   endShape(CLOSE);
 
@@ -50,8 +47,22 @@ void draw() {
   beginShape();
   fill(75, 75, 75);
   vertex(0, 600);
-  vertex(botLeftX, botRightY);
-  vertex(botRightX, botRightY);
+  vertex(leftX, bottomY);
+  vertex(rightX, bottomY);
   vertex(600, 600);
   endShape(CLOSE);
+}
+
+void keyPressed() {
+  switch (keyCode) {
+    case 37: leftX -= step, rightX -= step;
+    break;
+    case 38: topY -= step, bottomY -= step;
+    break;
+    case 39: leftX += step, rightX += step;
+    break;
+    case 40: topY += step, bottomY += step;
+    break;
+    default: return false;
+  }
 }
