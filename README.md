@@ -10,5 +10,5 @@ Processing, although written in Java and executed through a Java engine in the P
 
 #### why
 
-I am interested in the graphical possibilites of Processing and am keen to explore its capabilities. The Processing IDE itself is a little slow and fiddly, especially in JavaScript mode, so running sketches in the browser using a simple server will mean a quicker development loop. Also, because it is so easy to include sketches in web pages there may be interesting ways to enhance other sites that I work on in the future, including using user interaction to generate images or sound.
+I am interested in the graphical possibilities of Processing and am keen to explore its capabilities. The Processing IDE itself is a little slow and fiddly, especially in JavaScript mode, so running sketches in the browser using a simple server will mean a quicker development loop. Also, because it is so easy to include sketches in web pages there may be interesting ways to enhance other sites that I work on in the future, including using user interaction to generate images or sound.
 
